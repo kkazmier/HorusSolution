@@ -1,15 +1,17 @@
-import lombok.Setter;
+import lombok.AllArgsConstructor;
 
-@Setter
+@AllArgsConstructor
 public class CompositeBlockImpl implements CompositeBlock {
+    private String color;
+    private String material;
 
     @Override
     public String getColor() {
-        return this.getColor();
+        return color;
     }
 
     @Override
     public String getMaterial() {
-        return this.getMaterial();
+        return material;
     }
 }
