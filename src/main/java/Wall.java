@@ -5,17 +5,17 @@ import java.util.Optional;
 
 @AllArgsConstructor
 public class Wall implements Structure {
-    private List<Block> blocks;
+    private List<BlockImpl> blocks;
 
     @Override
-    public Optional findBlockByColor(String color) {
+    public Optional<BlockImpl> findBlockByColor(String color) {
         return blocks.stream()
                 .filter(b -> b.getColor().equals(color))
                 .findAny();
     }
 
     @Override
-    public List findBlocksByMaterial(String material) {
+    public List<BlockImpl> findBlocksByMaterial(String material) {
         return blocks.stream()
                 .filter(b -> b.getMaterial().equals(material))
                 .toList();
